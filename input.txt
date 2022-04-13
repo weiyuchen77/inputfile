@@ -1,0 +1,70 @@
+int a = 0;
+string ? name="",sex="",birth="",id="";
+string ? re="0";
+
+while( a ==0){
+    if (re=="1"){
+        Console .WriteLine  ("姓名：");
+        name = (Console.ReadLine ());
+    }else if (re=="2"){
+        Console .WriteLine  ("性別：1.男生 2.女生");
+        sex= (Console.ReadLine ());
+    }else if (re=="3"){
+        Console .WriteLine  ("出生年月日");
+        birth = (Console.ReadLine ());
+    }else if (re=="4"){
+        Console .WriteLine  ("學號");
+        id = (Console.ReadLine ());
+    }else {
+        Console .WriteLine  ("姓名：");
+        name = (Console.ReadLine ());
+        Console .WriteLine  ("性別：1.男生 2.女生");
+        sex= (Console.ReadLine ());
+        Console .WriteLine  ("出生年月日");
+        birth = (Console.ReadLine ());
+        Console .WriteLine  ("學號");
+        id = (Console.ReadLine ());
+    }
+    switch (sex )
+    {
+        case "1" :
+            sex="男生";
+        break ;
+        case "2" :
+            sex="女生";
+        break ;
+        default :
+            Console.WriteLine("erro");
+        break ;
+    }
+    Console .WriteLine  ("===================" );
+    Console .WriteLine  ("姓名："+name );
+    Console .WriteLine  ("性別："+sex );
+    Console .WriteLine  ("出生年月日："+birth);
+    Console .WriteLine  ("學號："+ id  );
+    Console .WriteLine  ("===================" );
+    Console .WriteLine  ("正確請輸入 “1”；重新填寫「一次」請輸入“2”" );
+    string ? final = (Console.ReadLine ());
+    switch (final  )
+    {
+        case "1" : 
+            a=1;
+            Console .WriteLine  ("===================" );
+            Console .WriteLine  ("已完成資料建置" );
+        break ;
+        case "2" :
+            a=0;
+            Console .WriteLine  ("全部重新填寫請輸入 “0”" );
+            Console .WriteLine  ("重新填寫姓名請輸入 “1”" );
+            Console .WriteLine  ("重新填寫性別請輸入 “2”" );
+            Console .WriteLine  ("重新填寫出生年月日請輸入 “3”" );
+            Console .WriteLine  ("重新填寫學號請輸入 “4”" );
+            re = (Console.ReadLine ());
+            Console .WriteLine  ("===================" );
+        break ;
+        default :
+            Console.WriteLine("erro");
+            Console .WriteLine  ("===================" );
+        break ;
+    }
+}
